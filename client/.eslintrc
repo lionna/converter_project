@@ -1,0 +1,59 @@
+{
+    "root": true,
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+        },
+    },
+    "settings": {
+        "react": {
+            "version": "detect",
+        },
+    },
+    "env": {
+        "browser": true,
+        "amd": true,
+        "node": true,
+        "es2021": true,
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "airbnb",
+        "plugin:prettier/recommended",
+        "prettier",
+        "plugin:sonarjs/recommended",
+    ],
+    "plugins": ["simple-import-sort", "sonarjs"],
+    "rules": {
+        "prettier/prettier": ["error", {}, {"usePrettierrc": true}],
+        "react/react-in-jsx-scope": "off",
+
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "simple-import-sort/imports": "error",
+
+        "no-unexpected-multiline": "error",
+        "comma-dangle": ["error", "always-multiline"],
+        "linebreak-style": ["error", "unix"],
+        "no-plusplus": 0,
+
+        "import/extensions": 0,
+        "import/no-named-as-default": 0,
+
+        "react/forbid-prop-types": 0,
+        "react/jsx-indent": [1, 4],
+        "react/jsx-indent-props": [1, 4],
+        "react/jsx-props-no-spreading": 0,
+        "no-console": 0,
+        "react-hooks/exhaustive-deps": 0, // airbnb overrides
+        "react/jsx-filename-extension": 0,
+        "jsx-a11y/label-has-associated-control": 0,
+
+        "react/function-component-definition": 0,
+        "import/no-extraneous-dependencies": 0,
+    },
+}
