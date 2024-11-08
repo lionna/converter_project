@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Settings\Interfaces\**" />
+    <EmbeddedResource Remove="Settings\Interfaces\**" />
+    <None Remove="Settings\Interfaces\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.8.15" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.1" />
+    <PackageReference Include="Polly" Version="8.4.2" />
+    <PackageReference Include="PuppeteerSharp" Version="20.0.5" />
+  </ItemGroup>
+
+</Project>
